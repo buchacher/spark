@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Movie Data Explorer</title>
+    </head>
+<body>
+
+<h1>Movie Data Explorer</h1>
+<p>Welcome to the movie explorer.</p>
+
+<h2>Movie ID Search</h2>
+<form action="{{ url_for('handle_movie_id_data') }}" method="post">
+    <input type="text" name="movieIDFormEntry" placeholder="E.g.: 1">
+    <input type="submit">
+</form>
+
+<br>
+<h2>Movie Title Search</h2>
+<form action="{{ url_for('handle_movie_title_data') }}" method="post">
+    <input type="text" name="movieTitleFormEntry" placeholder="E.g.: Toy Story (1995)">
+    <input type="submit">
+</form>
+
+<br>
+<h2>Movie Year Search</h2>
+<form action="{{ url_for('handle_movie_year_data') }}" method="post">
+    <input type="text" name="movieYearFormEntry" placeholder="E.g.: 1962">
+    <input type="submit">
+</form>
+
+<br>
+<h2>Movie Genre Search</h2>
+<form action="{{ url_for('handle_movie_genre_data') }}" method="post">
+    <input type="text" name="movieGenreFormEntry" placeholder="E.g.: Film-Noir">
+    <input type="submit">
+</form>
+
+<br>
+<h2>Top N Rated Movies</h2>
+<form action="{{ url_for('handle_movie_top_ratings_data') }}" method="post">
+    <input type="text" name="movieTopRatingsFormEntry" placeholder="E.g.: 10">
+    <input type="submit">
+</form>
+
+<br>
+<h2>Top N Viewed Movies</h2>
+<form action="{{ url_for('handle_movie_top_views_data') }}" method="post">
+    <input type="text" name="movieTopViewsFormEntry" placeholder="E.g.: 10">
+    <input type="submit">
+</form>
+
+<br>
+<h2>History for a User ID</h2>
+<form action="{{ url_for('handle_movie_user_history_data') }}" method="post">
+    <input type="text" name="movieUserHistoryFormEntry" placeholder="E.g.: 1">
+    <input type="submit">
+</form>
+
+<br>
+<h2>Movies Watched by a User ID</h2>
+<form action="{{ url_for('handle_movie_user_watched_data') }}" method="post">
+    <input type="text" name="movieUserWatchedFormEntry" placeholder="E.g.: 1">
+    <input type="submit">
+</form>
+
+<br>
+<h2>Favourite Genre for a User ID</h2>
+<form action="{{ url_for('handle_movie_user_favourite_genre_data') }}" method="post">
+    <input type="text" name="movieUserFavouriteGenreFormEntry" placeholder="E.g.: 1">
+    <input type="submit">
+</form>
+
+<br>
+<h2>Favourite Genre for Multiple User IDs</h2>
+<form action="{{ url_for('handle_movie_multiple_user_favourite_genre_data') }}" method="post">
+    <input type="text" name="movieMultipleUserFavouriteGenreFormEntry" placeholder="E.g.: 1,2">
+    <input type="submit">
+</form>
+<hr>
+<h2>Visualisations</h2>
+<h2>Favourite Genre for a User ID</h2>
+<form action="{{ url_for('vis_handle_movie_user_favourite_genre_data') }}" method="post">
+    <input type="text" name="movieUserFavouriteGenreFormEntry" placeholder="E.g.: 1">
+    <input type="submit">
+</form>
+
+<br>
+</body>
+</html>

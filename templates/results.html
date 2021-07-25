@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ resultType }} Results</title>
+</head>
+<body>
+    <h1>{{ resultType }} Results</h1>
+
+    {% for table in tables %}
+            {{ table|safe }}
+    {% endfor %}
+</body>
+</html>
